@@ -16,8 +16,8 @@ Quick checklist of all issues in planned order.
 - [x] **0.2** - Verify & Complete Project Structure (#GH-5)
 - [x] **0.3** - Configure PWA and Service Worker (#GH-6)
 - [x] **0.4** - Configure Environment Variables & Config (#GH-7)
-- [ ] **0.5** - Verify Cloudflare Adapter Configuration (#GH-8)
-- [ ] **0.6** - Setup CI/CD - GitHub Actions (#GH-9)
+- [x] **0.5** - Verify Cloudflare Adapter Configuration (#GH-8)
+- [x] **0.6** - Setup CI/CD - GitHub Actions (#GH-9)
 
 ## Phase 1
 
@@ -96,7 +96,6 @@ Quick checklist of all issues in planned order.
 - [ ] **8.1** - Cloudflare Deployment (#GH-42)
 - [ ] **8.2** - Release v1.0 Preparation (#GH-43)
 
-
 ---
 
 ## 📝 How to Use This
@@ -124,4 +123,3 @@ Quick checklist of all issues in planned order.
 7. **#GH-15-test** (1.6) - Tests for Order Items → **#GH-15** (1.6a) Implement Order Items
 8. **#GH-16** (1.7) - Main Layout (TDD)
 9. Continue with Phase 2 stores and CRUD (test first, then implementation)
-
