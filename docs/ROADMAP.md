@@ -16,15 +16,15 @@ Quick checklist of all issues in planned order.
 - [x] **0.2** - Verify & Complete Project Structure (#GH-5)
 - [x] **0.3** - Configure PWA and Service Worker (#GH-6)
 - [x] **0.4** - Configure Environment Variables & Config (#GH-7)
-- [ ] **0.5** - Verify Cloudflare Adapter Configuration (#GH-8)
-- [ ] **0.6** - Setup CI/CD - GitHub Actions (#GH-9)
+- [x] **0.5** - Verify Cloudflare Adapter Configuration (#GH-8)
+- [x] **0.6** - Setup CI/CD - GitHub Actions (#GH-9)
 
 ## Phase 1
 
 - [x] **1.1** - TypeScript Interfaces for Business Domain (TDD) (#GH-10)
 - [x] **1.2** - Calculate Margins and Totals Logic (TDD) (#GH-11)
 - [x] **1.3** - Svelte Store for Active Order (Svelte 5 Runes - TDD) (#GH-12)
-- [ ] **1.4** - Product Form Component Tests (TDD) (#GH-13-test)
+- [x] **1.4** - Product Form Component Tests (TDD) (#GH-13-test)
 - [ ] **1.4a** - Product Form Component (#GH-13)
 - [ ] **1.5** - Product Grid Component Tests (POS-style - TDD) (#GH-14-test)
 - [ ] **1.5a** - Product Grid Component (POS-style) (#GH-14)
@@ -96,7 +96,6 @@ Quick checklist of all issues in planned order.
 - [ ] **8.1** - Cloudflare Deployment (#GH-42)
 - [ ] **8.2** - Release v1.0 Preparation (#GH-43)
 
-
 ---
 
 ## 📝 How to Use This
@@ -124,4 +123,3 @@ Quick checklist of all issues in planned order.
 7. **#GH-15-test** (1.6) - Tests for Order Items → **#GH-15** (1.6a) Implement Order Items
 8. **#GH-16** (1.7) - Main Layout (TDD)
 9. Continue with Phase 2 stores and CRUD (test first, then implementation)
-
