@@ -65,7 +65,7 @@
 	}
 </script>
 
-<form role="form">
+<form>
 	<div>
 		<label for="product-select">Product</label>
 		<select id="product-select" bind:value={selectedProductId}>

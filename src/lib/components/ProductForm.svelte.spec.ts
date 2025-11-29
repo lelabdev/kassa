@@ -39,7 +39,7 @@ describe('ProductForm.svelte', () => {
 		it('should render the form with all input fields', async () => {
 			render(ProductForm, { props: { products: mockProducts } });
 
-			const form = page.getByRole('form');
+			const form = page.locator('form');
 			await expect.element(form).toBeInTheDocument();
 
 			expect.hasAssertions();
@@ -136,7 +136,7 @@ describe('ProductForm.svelte', () => {
 		it('should have empty/default values initially', async () => {
 			render(ProductForm, { props: { products: mockProducts } });
 
-			const quantityInput = page.getByRole('spinbutton', { name: /quantity/i }) as any;
+			const quantityInput = page.getByRole('spinbutton', { name: /quantity/i }) as HTMLInputElement;
 			const value = await quantityInput.getAttribute('value');
 			expect(value).toBeFalsy();
 
@@ -155,7 +155,7 @@ describe('ProductForm.svelte', () => {
 		it('should have Add button disabled initially', async () => {
 			render(ProductForm, { props: { products: mockProducts } });
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled !== null).toBe(true);
 
@@ -170,7 +170,7 @@ describe('ProductForm.svelte', () => {
 			const quantityInput = page.getByRole('spinbutton', { name: /quantity/i });
 			await quantityInput.fill('5');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled !== null).toBe(true);
 
@@ -188,7 +188,7 @@ describe('ProductForm.svelte', () => {
 			const quantityInput = page.getByRole('spinbutton', { name: /quantity/i });
 			await quantityInput.fill('0');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled !== null).toBe(true);
 
@@ -212,7 +212,7 @@ describe('ProductForm.svelte', () => {
 			const saleInput = page.getByRole('spinbutton', { name: /sale.*price|selling.*price/i });
 			await saleInput.fill('15');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled === null).toBe(true);
 
@@ -236,7 +236,7 @@ describe('ProductForm.svelte', () => {
 			const saleInput = page.getByRole('spinbutton', { name: /sale.*price|selling.*price/i });
 			await saleInput.fill('10');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled !== null).toBe(true);
 
@@ -260,7 +260,7 @@ describe('ProductForm.svelte', () => {
 			const saleInput = page.getByRole('spinbutton', { name: /sale.*price|selling.*price/i });
 			await saleInput.fill('15');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled === null).toBe(true);
 
@@ -363,7 +363,7 @@ describe('ProductForm.svelte', () => {
 			await addButton.click();
 
 			// After submission, form should be reset
-			const quantityValue = await (quantityInput as any).getAttribute('value');
+			const quantityValue = await (quantityInput as HTMLInputElement).getAttribute('value');
 			expect(quantityValue).toBeFalsy();
 
 			expect.hasAssertions();
@@ -378,7 +378,7 @@ describe('ProductForm.svelte', () => {
 			const cancelButton = page.getByRole('button', { name: /cancel/i });
 			await cancelButton.click();
 
-			const quantityValue = await (quantityInput as any).getAttribute('value');
+			const quantityValue = await (quantityInput as HTMLInputElement).getAttribute('value');
 			expect(quantityValue).toBeFalsy();
 
 			expect.hasAssertions();
@@ -387,7 +387,7 @@ describe('ProductForm.svelte', () => {
 		it('should disable Add button until form is valid', async () => {
 			render(ProductForm, { props: { products: mockProducts } });
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 
 			// Initially disabled
 			let disabled = await addButton.getAttribute('disabled');
@@ -432,7 +432,7 @@ describe('ProductForm.svelte', () => {
 			const saleInput = page.getByRole('spinbutton', { name: /sale.*price|selling.*price/i });
 			await saleInput.fill('15.75');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled === null).toBe(true);
 
@@ -458,7 +458,7 @@ describe('ProductForm.svelte', () => {
 			const saleInput = page.getByRole('spinbutton', { name: /sale.*price|selling.*price/i });
 			await saleInput.fill('15');
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled === null).toBe(true);
 
@@ -479,8 +479,8 @@ describe('ProductForm.svelte', () => {
 
 			const productSelect = page.getByRole('combobox', { name: /product/i });
 			await productSelect.click();
-			let option1 = page.getByRole('option', { name: /apples/i });
-			await option1.click();
+			const applesOption = page.getByRole('option', { name: /apples/i });
+			await applesOption.click();
 
 			const quantityInput = page.getByRole('spinbutton', { name: /quantity/i });
 			const purchaseInput = page.getByRole('spinbutton', { name: /purchase.*price/i });
@@ -495,7 +495,7 @@ describe('ProductForm.svelte', () => {
 			const option2 = page.getByRole('option', { name: /oranges/i });
 			await option2.click();
 
-			const addButton = page.getByRole('button', { name: /add/i }) as any;
+			const addButton = page.getByRole('button', { name: /add/i }) as HTMLButtonElement;
 			const disabled = await addButton.getAttribute('disabled');
 			expect(disabled === null).toBe(true);
 
