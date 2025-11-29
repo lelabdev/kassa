@@ -110,14 +110,30 @@ git push -u origin feat/11-margin-calculations
 # Then create PR on GitHub with the issue reference
 ```
 
-### Important Git Rules
+### Important Git Rules - ⚠️ CRITICAL
 
-- ✅ **Never commit to main** - Always use feature branches
+**🚫 NEVER MODIFY FILES ON `main` BRANCH** - It is protected on GitHub and will be rejected!
+
+- **ALWAYS create a feature branch FIRST** before making ANY changes
+  - Branch format: `<type>/<issue-number>-<slug>`
+  - Examples: `feat/11-margin-calculations`, `test/14-product-grid`, `docs/5-readme`
+  - If unsure about the issue number or branch name, **ASK BEFORE PROCEEDING**
+
+- **WORKFLOW (mandatory):**
+  1. Check current branch: `git status` (should NOT be on `main`)
+  2. If on `main`, create feature branch IMMEDIATELY: `git checkout -b test/14-product-grid`
+  3. Make changes on feature branch only
+  4. Commit with issue reference: `Closes #14`
+  5. Push branch: `git push -u origin test/14-product-grid`
+  6. Create PR and merge via GitHub UI
+
 - ✅ **Always reference issue number** in commit messages (`Closes #11`)
 - ✅ **One issue per branch** - Keep work focused
 - ✅ **Tests must pass** - Run `pnpm test` before committing
 - ✅ **Code must be formatted** - Run `pnpm format` before committing
 - ✅ **TypeScript must check** - Run `pnpm check` before committing
+
+**Remember:** GitHub branch protection prevents direct commits to `main`. All work must go through feature branches → PR → merge.
 
 ## Development Roadmap
 
