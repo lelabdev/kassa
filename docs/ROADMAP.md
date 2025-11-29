@@ -15,7 +15,7 @@ Quick checklist of all issues in planned order.
 - [x] **0.1** - Configure PouchDB + TypeScript Types (#GH-4)
 - [x] **0.2** - Verify & Complete Project Structure (#GH-5)
 - [x] **0.3** - Configure PWA and Service Worker (#GH-6)
-- [ ] **0.4** - Configure Environment Variables & Config (#GH-7)
+- [x] **0.4** - Configure Environment Variables & Config (#GH-7)
 - [ ] **0.5** - Verify Cloudflare Adapter Configuration (#GH-8)
 - [ ] **0.6** - Setup CI/CD - GitHub Actions (#GH-9)
 
