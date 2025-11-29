@@ -2,8 +2,11 @@
 
 Quick checklist of all issues in planned order.
 
-> 💡 **All issue details are on GitHub.** Click the issue link (e.g., `#4`) to see full requirements, acceptance criteria, and TDD specifications.
-> **⚠️ ALL WORK MUST USE TDD** - Tests first, then implementation.
+> 💡 **All issue details are on GitHub** — For full requirements, acceptance criteria, TDD specifications, and implementation guidance, open the GitHub issue (click the issue link, e.g., `#4`).
+>
+> 📌 **This file is a checklist only** — Use it to track progress. Detailed specs live in GitHub issues.
+>
+> **⚠️ ALL WORK MUST USE TDD** — Tests first (RED), then implementation (GREEN), then refactor (REFACTOR).
 
 ---
 
