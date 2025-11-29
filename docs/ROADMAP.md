@@ -2,8 +2,11 @@
 
 Quick checklist of all issues in planned order.
 
-> 💡 **All issue details are on GitHub.** Click the issue link (e.g., `#4`) to see full requirements, acceptance criteria, and TDD specifications.
-> **⚠️ ALL WORK MUST USE TDD** - Tests first, then implementation.
+> 💡 **All issue details are on GitHub** - For full requirements, acceptance criteria, TDD specifications, and implementation guidance, open the GitHub issue (e.g., click `#4` for issue details).
+>
+> 📌 **This file is a checklist only** - Use it to track progress. Detailed specs live in GitHub issues.
+>
+> **⚠️ ALL WORK MUST USE TDD** - Tests first (RED), then implementation (GREEN), then refactor (REFACTOR).
 
 ---
 
@@ -77,15 +80,18 @@ Quick checklist of all issues in planned order.
 
 ---
 
-## 📝 How to Use This
+## 📝 How to Use This Roadmap
 
-1. Pick next unchecked item
-2. Open the GitHub issue (#XX) for full details
-3. Create branch: `<type>/<issue-number>-<slug>` (e.g., `feat/4-pouchdb-setup`)
-4. **Work TDD**: Write tests first (failures), then code (pass tests), then refactor
-5. Create PR and link to the issue
-6. Get review and merge to main
-7. ✅ Check the item in roadmap when merged (update this file with `- [x]`)
+1. **Pick next unchecked item** from a phase
+2. **Open the GitHub issue** (click the issue link, e.g., `#4`) for complete specifications, acceptance criteria, and TDD guidance
+3. **Create a feature branch**: `<type>/<#>-<slug>` (e.g., `feat/4-pouchdb-setup`)
+4. **Work using TDD**:
+   - 🔴 **RED**: Write tests first (they should fail)
+   - 🟢 **GREEN**: Write minimum code to pass tests
+   - 🔵 **REFACTOR**: Clean up while keeping tests passing
+5. **Create PR** and link to the GitHub issue
+6. **Get review** and merge to main
+7. **Check off** the item in this roadmap: change `- [ ]` to `- [x]`
 
 ---
 
