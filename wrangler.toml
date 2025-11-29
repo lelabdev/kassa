@@ -1,7 +1,10 @@
 name = "kassa"
-type = "javascript"
 main = "build/index.js"
 compatibility_date = "2025-11-29"
+
+[assets]
+directory = "build/client"
+binding = "ASSETS"
 
 [env.production]
 name = "kassa-prod"
