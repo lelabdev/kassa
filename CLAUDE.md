@@ -30,6 +30,97 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Linting**: ESLint 9.x with TypeScript + Svelte plugins
 - **Code Formatting**: Prettier with Svelte and Tailwind plugins
 
+## Git Workflow & Conventions
+
+### Branch Naming Convention
+
+Create branches using this format: `<type>/<issue-#>-<slug>`
+
+**Types (must match GitHub labels):**
+- `feat/` - New features
+- `test/` - Tests and test-related
+- `docs/` - Documentation
+- `bug/` - Bug fixes
+- `refactor/` - Code refactoring
+
+**Examples:**
+```bash
+git checkout -b feat/issue-11-margin-calculations
+git checkout -b test/issue-33-unit-tests
+git checkout -b docs/issue-40-user-guide
+git checkout -b bug/issue-123-fix-decimal-rounding
+```
+
+### Commit Message Convention
+
+Use Conventional Commits format:
+
+```
+<type>: <subject (imperative, lowercase, no period)>
+
+<body (wrap at 100 chars, explain why not what)>
+
+Closes #<issue-number>
+```
+
+**Example:**
+```
+feat: implement margin and total calculations with tests
+
+- Add calculateItemCost, calculateItemRevenue functions
+- Add calculateMargin and calculateProfitPercentage functions
+- Implement 100% test coverage with edge cases
+- TDD approach: tests first, then code, then refactor
+
+Closes #11
+```
+
+### GitHub Labels
+
+Only 5 labels per issue:
+- **feature** - New features and enhancements
+- **test** - Tests and TDD-related
+- **docs** - Documentation
+- **bug** - Bug fixes
+- **refactor** - Code refactoring and technical debt
+
+### Workflow Example
+
+```bash
+# 1. Create branch from issue
+git checkout -b feat/issue-11-margin-calculations
+
+# 2. Work on the issue (TDD: tests first!)
+# - Red: Write tests that fail
+# - Green: Write code to pass tests
+# - Refactor: Clean up code while tests still pass
+
+# 3. Commit with clear message
+git add src/lib/utils/calculations.ts src/lib/utils/calculations.spec.ts
+git commit -m "feat: implement margin and total calculations with tests
+
+- Add calculateItemCost, calculateItemRevenue, calculateMargin functions
+- Implement 100% test coverage
+- TDD approach: red → green → refactor
+
+Closes #11"
+
+# 4. Push and create PR
+git push -u origin feat/issue-11-margin-calculations
+# Then create PR on GitHub with the issue reference
+```
+
+### Important Git Rules
+
+- ✅ **Never commit to main** - Always use feature branches
+- ✅ **Always reference issue number** in commit messages (`Closes #11`)
+- ✅ **One issue per branch** - Keep work focused
+- ✅ **Tests must pass** - Run `pnpm test` before committing
+- ✅ **Code must be formatted** - Run `pnpm format` before committing
+- ✅ **TypeScript must check** - Run `pnpm check` before committing
+
+---
+
 ## Quick Commands
 
 ### Development
