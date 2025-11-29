@@ -22,8 +22,8 @@ Quick checklist of all issues in planned order.
 ## Phase 1
 
 - [x] **1.1** - TypeScript Interfaces for Business Domain (TDD) (#GH-10)
-- [ ] **1.2** - Calculate Margins and Totals Logic (TDD) (#GH-11)
-- [ ] **1.3** - Svelte Store for Active Order (Svelte 5 Runes - TDD) (#GH-12)
+- [x] **1.2** - Calculate Margins and Totals Logic (TDD) (#GH-11)
+- [x] **1.3** - Svelte Store for Active Order (Svelte 5 Runes - TDD) (#GH-12)
 - [ ] **1.4** - Product Form Component Tests (TDD) (#GH-13-test)
 - [ ] **1.4a** - Product Form Component (#GH-13)
 - [ ] **1.5** - Product Grid Component Tests (POS-style - TDD) (#GH-14-test)

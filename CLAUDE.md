@@ -257,6 +257,16 @@ Dual testing setup with different environments:
 - Snippet syntax for slot-like components
 - Compile errors if mixing old and new syntax
 
+### UI Components & Styling
+
+- **Skeleton UI Components**: Use Skeleton Labs components for consistent UI
+  - Reference: https://www.skeleton.dev/llms-svelte.txt (use this for LLM context)
+  - Always use Skeleton components with **Tailwind CSS classes only**
+  - **NO inline styles** - use Tailwind utilities for all styling
+  - **NO `<style>` blocks** unless absolutely necessary for complex animations/behavior
+  - Use Tailwind's utility classes for responsive design and state variants
+  - Leverage Skeleton's pre-built components (buttons, cards, modals, etc.) instead of creating custom ones
+
 ## Important Notes
 
 - **Package Manager**: Always use `pnpm` (never npm or yarn)
