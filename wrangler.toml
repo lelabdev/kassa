@@ -1,0 +1,13 @@
+name = "kassa"
+type = "javascript"
+main = "build/index.js"
+compatibility_date = "2025-11-29"
+
+[env.production]
+name = "kassa-prod"
+routes = [
+	{ pattern = "kassa.fr", zone_name = "kassa.fr" }
+]
+
+[env.staging]
+name = "kassa-staging"
