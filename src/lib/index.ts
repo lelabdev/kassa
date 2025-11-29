@@ -10,3 +10,4 @@ export {
 	DB_NAME
 } from './db/database';
 export { config } from './config';
+export { createOrderStore, getOrderStore } from './stores/order.svelte';
