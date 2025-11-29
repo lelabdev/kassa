@@ -4,12 +4,36 @@ import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { readFileSync, writeFileSync } from 'fs';
+import { resolve } from 'path';
+
+// Plugin to fix service worker accessibility on Cloudflare
+// Remove /sw.js from route exclusions so it's handled by the Worker
+const fixCloudflareServiceWorkerPlugin = {
+	name: 'fix-cloudflare-sw',
+	apply: 'build',
+	async closeBundle() {
+		try {
+			const routesPath = resolve('.svelte-kit/cloudflare/_routes.json');
+			const routes = JSON.parse(readFileSync(routesPath, 'utf-8'));
+
+			// Remove /sw.js from exclusions so it's handled by the Worker
+			routes.exclude = routes.exclude.filter((pattern) => pattern !== '/sw.js');
+
+			writeFileSync(routesPath, JSON.stringify(routes, null, '\t'));
+			console.log('✓ Fixed Cloudflare _routes.json to include /sw.js');
+		} catch (error) {
+			console.warn('⚠ Could not fix Cloudflare _routes.json:', error);
+		}
+	}
+};
 
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit(),
 		devtoolsJson(),
+		fixCloudflareServiceWorkerPlugin,
 		VitePWA({
 			strategies: 'generateSW',
 			manifest: {
