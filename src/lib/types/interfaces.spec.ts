@@ -1,10 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import type {
-	Product,
-	OrderItem,
-	Order,
-	Client
-} from './interfaces';
+import type { Product, OrderItem, Order, Client } from './interfaces';
 
 // Suppress unused variable warnings during RED phase
 const _: any = undefined;
@@ -122,9 +117,7 @@ describe('Business Domain Interfaces', () => {
 				createdAt: new Date().toISOString(),
 				updatedAt: new Date().toISOString()
 			};
-			expect(validProduct.sellingPrice).toBeGreaterThanOrEqual(
-				validProduct.purchasePrice
-			);
+			expect(validProduct.sellingPrice).toBeGreaterThanOrEqual(validProduct.purchasePrice);
 		});
 	});
 

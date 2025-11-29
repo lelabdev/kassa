@@ -27,9 +27,9 @@ Quick checklist of all issues in planned order.
 - [x] **1.4** - Product Form Component Tests (TDD) (#GH-13-test)
 - [x] **1.4a** - Product Form Component (#GH-13)
 - [x] **1.5** - Product Grid Component Tests (POS-style - TDD) (#GH-14-test)
-- [ ] **1.5a** - Product Grid Component (POS-style) (#GH-14)
-- [ ] **1.6** - Order Items Display Component Tests (TDD) (#GH-15-test)
-- [ ] **1.6a** - Order Items Display Component (#GH-15)
+- [x] **1.5a** - Product Grid Component (POS-style) (#GH-14)
+- [x] **1.6** - Order Items Display Component Tests (TDD) (#GH-15-test)
+- [x] **1.6a** - Order Items Display Component (#GH-15)
 - [ ] **1.7** - Main Home Page / Layout (TDD) (#GH-16)
 
 ## Phase 2

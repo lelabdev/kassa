@@ -9,6 +9,7 @@ All workflows run on `ubuntu-latest` with Node.js 20.x and pnpm.
 **Triggered:** Push to main, Pull requests to main
 
 **Jobs:**
+
 - ✅ Install dependencies (`pnpm install --frozen-lockfile`)
 - ✅ Lint code (`pnpm lint`)
 - ✅ Type check (`pnpm check`)
@@ -22,6 +23,7 @@ All workflows run on `ubuntu-latest` with Node.js 20.x and pnpm.
 **Triggered:** Push to main, Pull requests to main
 
 **Jobs:**
+
 - ✅ Install dependencies
 - ✅ Build SvelteKit (`pnpm build`)
 - ✅ Upload build artifact to GitHub
@@ -33,6 +35,7 @@ All workflows run on `ubuntu-latest` with Node.js 20.x and pnpm.
 **Triggered:** Push to main only (not PR)
 
 **Jobs:**
+
 - ✅ Install dependencies
 - ✅ Build SvelteKit
 - ✅ Deploy to Cloudflare Pages
@@ -40,6 +43,7 @@ All workflows run on `ubuntu-latest` with Node.js 20.x and pnpm.
 **Purpose:** Automatically deploy to production when code is merged to main
 
 **Setup Required (when ready for Phase 8.1):**
+
 1. Create Cloudflare Pages project
 2. Get API token: https://dash.cloudflare.com/profile/api-tokens
 3. Get Account ID: https://dash.cloudflare.com/

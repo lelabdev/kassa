@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Kassa** is a mobile-first PWA (Progressive Web App) designed for small fruit and vegetable vendors (families, couples, small shops) to simplify sales calculations and margin management.
 
 **Core Features:**
+
 - Quick product selection via large icons (POS-style interface)
 - Real-time price and margin calculations (comparing purchase vs selling price)
 - Multi-client/order management with easy switching
@@ -14,6 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Profit margin tracking and percentage calculation
 
 **Future Features:**
+
 - Sales history tracking and daily summaries
 - Data analysis with trend visualization (best-selling products by day)
 
@@ -37,6 +39,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Create branches using this format: `<type>/<#>-<slug>`
 
 **Types (must match GitHub labels):**
+
 - `feat/` - New features
 - `test/` - Tests and test-related
 - `docs/` - Documentation
@@ -44,6 +47,7 @@ Create branches using this format: `<type>/<#>-<slug>`
 - `refactor/` - Code refactoring
 
 **Examples:**
+
 ```bash
 git checkout -b feat/11-margin-calculations
 git checkout -b test/33-unit-tests
@@ -64,6 +68,7 @@ Closes #<issue-number>
 ```
 
 **Example:**
+
 ```
 feat: implement margin and total calculations with tests
 
@@ -78,6 +83,7 @@ Closes #11
 ### GitHub Labels
 
 Only 5 labels per issue:
+
 - **feature** - New features and enhancements
 - **test** - Tests and TDD-related
 - **docs** - Documentation
@@ -119,11 +125,13 @@ git push -u origin feat/11-margin-calculations
 #### ✋ MANDATORY RULE: ALWAYS CREATE FEATURE BRANCH FIRST
 
 **Before you modify ANY file, verify you are NOT on `main`:**
+
 ```bash
 git status  # If you see "On branch main" → STOP and create branch immediately
 ```
 
 **If you see "On branch main", create feature branch NOW:**
+
 ```bash
 git checkout -b <type>/<issue-number>-<slug>
 # Examples: test/14-product-grid, feat/11-margin, docs/5-setup
@@ -141,6 +149,7 @@ git checkout -b <type>/<issue-number>-<slug>
 6. **MERGE**: Create PR on GitHub → Review → Merge
 
 #### Branch Naming Format (mandatory)
+
 - `test/<issue-number>-<slug>` for tests
 - `feat/<issue-number>-<slug>` for features
 - `docs/<issue-number>-<slug>` for documentation
@@ -150,6 +159,7 @@ git checkout -b <type>/<issue-number>-<slug>
 **DO NOT deviate from this format.**
 
 #### Commit Requirements
+
 - ✅ Always reference issue number: `Closes #14`
 - ✅ Tests must pass: `pnpm test`
 - ✅ Code formatted: `pnpm format`
@@ -209,12 +219,14 @@ The project is organized in 8 phases (Phase 0-8) to build Kassa incrementally wi
 ## Quick Commands
 
 ### Development
+
 ```bash
 pnpm dev              # Start dev server with hot reload
 pnpm dev -- --open    # Start dev server and open in browser
 ```
 
 ### Testing
+
 ```bash
 pnpm test:unit        # Run unit tests (Vitest + Playwright browser tests)
 pnpm test:e2e         # Run end-to-end tests
@@ -222,6 +234,7 @@ pnpm test             # Run all tests (unit + e2e)
 ```
 
 ### Code Quality
+
 ```bash
 pnpm lint             # Run ESLint and Prettier checks
 pnpm format           # Auto-format code with Prettier
@@ -230,6 +243,7 @@ pnpm check:watch      # Run type checking in watch mode
 ```
 
 ### Build & Deploy
+
 ```bash
 pnpm build            # Production build for Cloudflare
 pnpm preview          # Preview production build locally (port 4173)
@@ -270,6 +284,7 @@ Dual testing setup with different environments:
 ## Code Style Guidelines
 
 ### Formatting & Linting
+
 - **Indentation**: Tabs (not spaces)
 - **Quotes**: Single quotes
 - **Line Width**: 100 characters
@@ -277,6 +292,7 @@ Dual testing setup with different environments:
 - **Tailwind Classes**: Auto-ordered by Prettier plugin (stylesheet: `src/routes/layout.css`)
 
 ### TypeScript
+
 - Strict mode enabled (`strict: true`)
 - JavaScript type-checked (`checkJs: true`)
 - No `any` types - create proper interfaces instead
@@ -284,6 +300,7 @@ Dual testing setup with different environments:
 - Path alias: `$lib` maps to `src/lib`
 
 ### ESLint
+
 - TypeScript-eslint recommended rules
 - Svelte linting via eslint-plugin-svelte
 - Prettier integration (no conflicts)
@@ -291,6 +308,7 @@ Dual testing setup with different environments:
 - `.gitignore` patterns respected
 
 ### Svelte 5 Specifics
+
 - Uses Runes (`$state`, `$derived`, `$effect`) - NOT legacy reactive declarations
 - Props destructuring: `let { children } = $props()`
 - Snippet syntax for slot-like components

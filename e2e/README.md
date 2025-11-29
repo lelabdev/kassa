@@ -18,44 +18,44 @@ End-to-end tests using Playwright for complete user workflows.
 import { test, expect } from '@playwright/test';
 
 test.describe('Sales Workflow', () => {
-  test('should create order from start to finish', async ({ page }) => {
-    // Setup
-    await page.goto('http://localhost:5173');
+	test('should create order from start to finish', async ({ page }) => {
+		// Setup
+		await page.goto('http://localhost:5173');
 
-    // User action: Add client
-    await page.click('button:has-text("Add Client")');
-    await page.fill('input[name="clientName"]', 'John Doe');
-    await page.click('button:has-text("Save")');
+		// User action: Add client
+		await page.click('button:has-text("Add Client")');
+		await page.fill('input[name="clientName"]', 'John Doe');
+		await page.click('button:has-text("Save")');
 
-    // User action: Add product to order
-    await page.click('[data-product="apple"]');
-    await page.fill('input[name="quantity"]', '5');
-    await page.fill('input[name="price"]', '1.50');
+		// User action: Add product to order
+		await page.click('[data-product="apple"]');
+		await page.fill('input[name="quantity"]', '5');
+		await page.fill('input[name="price"]', '1.50');
 
-    // Verify: Margin displays correctly
-    await expect(page.locator('[data-margin]')).toContainText('1.50');
+		// Verify: Margin displays correctly
+		await expect(page.locator('[data-margin]')).toContainText('1.50');
 
-    // User action: Complete order
-    await page.click('button:has-text("Complete Order")');
+		// User action: Complete order
+		await page.click('button:has-text("Complete Order")');
 
-    // Verify: Order saved
-    await expect(page.locator('[data-order-count]')).toContainText('1');
-  });
+		// Verify: Order saved
+		await expect(page.locator('[data-order-count]')).toContainText('1');
+	});
 
-  test('should work offline', async ({ page, context }) => {
-    // Load app first
-    await page.goto('http://localhost:5173');
+	test('should work offline', async ({ page, context }) => {
+		// Load app first
+		await page.goto('http://localhost:5173');
 
-    // Go offline
-    await context.setOffline(true);
+		// Go offline
+		await context.setOffline(true);
 
-    // App should still work
-    await page.click('[data-product="apple"]');
-    await expect(page.locator('[data-form]')).toBeVisible();
+		// App should still work
+		await page.click('[data-product="apple"]');
+		await expect(page.locator('[data-form]')).toBeVisible();
 
-    // Go online
-    await context.setOffline(false);
-  });
+		// Go online
+		await context.setOffline(false);
+	});
 });
 ```
 

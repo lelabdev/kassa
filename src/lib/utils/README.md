@@ -14,7 +14,9 @@ Utility functions and helpers for business logic and common operations.
 ## Categories
 
 ### Calculations (`calculations.ts`)
+
 Business logic for financial calculations:
+
 - `calculateItemCost(quantity, price): number`
 - `calculateItemRevenue(quantity, price): number`
 - `calculateMargin(cost, revenue): number`
@@ -22,19 +24,25 @@ Business logic for financial calculations:
 - `calculateOrderTotals(items): OrderTotals`
 
 ### Formatting
+
 Data formatting utilities:
+
 - Currency formatting (EUR, USD, etc.)
 - Date/time formatting
 - Number rounding and precision
 
 ### Validation
+
 Input validation:
+
 - Email validation
 - Phone number validation
 - Price validation (non-negative, decimal places)
 
 ### Helpers
+
 Common utilities:
+
 - Array manipulation
 - Object utilities
 - String utilities
@@ -50,9 +58,9 @@ Common utilities:
  * @returns Margin amount
  */
 export function calculateMargin(purchasePrice: number, salePrice: number): number {
-  if (purchasePrice < 0 || salePrice < 0) {
-    throw new Error('Prices must be non-negative');
-  }
-  return salePrice - purchasePrice;
+	if (purchasePrice < 0 || salePrice < 0) {
+		throw new Error('Prices must be non-negative');
+	}
+	return salePrice - purchasePrice;
 }
 ```

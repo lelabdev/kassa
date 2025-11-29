@@ -13,7 +13,9 @@ TypeScript interfaces and types for Kassa business domain and data models.
 ## Type Categories
 
 ### Business Types (`business.ts`)
+
 Core domain entities:
+
 - `Client` - Customer/vendor entity
 - `Product` - Product catalog item
 - `Order` - Sales order/receipt
@@ -21,7 +23,9 @@ Core domain entities:
 - `CalculatedMargin` - Financial calculations result
 
 ### Database Types (`database.ts`)
+
 PouchDB document types extending business types:
+
 - `ClientDoc` - PouchDB document for Client
 - `ProductDoc` - PouchDB document for Product
 - `OrderDoc` - PouchDB document for Order
@@ -35,14 +39,14 @@ PouchDB document types extending business types:
  * Represents a customer/client in the system
  */
 interface Client {
-  /** Unique identifier */
-  id: string;
-  /** Client name or business name */
-  name: string;
-  /** Optional email address */
-  email?: string;
-  /** Optional phone number */
-  phone?: string;
+	/** Unique identifier */
+	id: string;
+	/** Client name or business name */
+	name: string;
+	/** Optional email address */
+	email?: string;
+	/** Optional phone number */
+	phone?: string;
 }
 
 // types/database.ts
@@ -50,13 +54,13 @@ interface Client {
  * PouchDB document for Client (extends Client with DB fields)
  */
 interface ClientDoc extends Client {
-  /** PouchDB document ID */
-  _id?: string;
-  /** PouchDB revision */
-  _rev?: string;
-  /** Document type discriminator */
-  type: 'client';
-  /** Creation timestamp */
-  createdAt: number;
+	/** PouchDB document ID */
+	_id?: string;
+	/** PouchDB revision */
+	_rev?: string;
+	/** Document type discriminator */
+	type: 'client';
+	/** Creation timestamp */
+	createdAt: number;
 }
 ```
