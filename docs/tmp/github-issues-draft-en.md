@@ -36,7 +36,7 @@ For each issue, the workflow is:
 
 ## ⚡ PHASE 0: REMAINING SETUP (Essential Foundations)
 
-### Issue 0.1: Configure PouchDB + TypeScript Types
+### Issue 0.1: Configure PouchDB + TypeScript Types (#GH-4)
 **Type**: Setup
 **Labels**: `setup`, `database`, `pouchdb`, `critical`
 **Priority**: 🔴 Critical
@@ -65,7 +65,7 @@ Install and configure PouchDB for offline-first persistence:
 
 ---
 
-### Issue 0.2: Verify & Complete Project Structure
+### Issue 0.2: Verify & Complete Project Structure (#GH-5)
 **Type**: Setup
 **Labels**: `setup`, `architecture`
 **Priority**: 🟡 High
@@ -92,7 +92,7 @@ Verify and complete folder structure:
 
 ---
 
-### Issue 0.3: Configure PWA and Service Worker
+### Issue 0.3: Configure PWA and Service Worker (#GH-6)
 **Type**: Setup
 **Labels**: `setup`, `pwa`, `service-worker`, `offline-first`
 **Priority**: 🟡 High
@@ -121,7 +121,7 @@ Configure the app as a PWA with service worker for offline operation:
 
 ---
 
-### Issue 0.4: Configure Environment Variables & Config
+### Issue 0.4: Configure Environment Variables & Config (#GH-7)
 **Type**: Setup
 **Labels**: `setup`, `config`, `environment`
 **Priority**: 🟡 Medium
@@ -146,7 +146,7 @@ Configure environment variable management:
 
 ---
 
-### Issue 0.5: Verify Cloudflare Adapter Configuration
+### Issue 0.5: Verify Cloudflare Adapter Configuration (#GH-8)
 **Type**: Setup
 **Labels**: `setup`, `deployment`, `cloudflare`
 **Priority**: 🟡 Medium
@@ -171,7 +171,7 @@ Verify and finalize Cloudflare configuration:
 
 ---
 
-### Issue 0.6: Setup CI/CD - GitHub Actions
+### Issue 0.6: Setup CI/CD - GitHub Actions (#GH-9)
 **Type**: Setup
 **Labels**: `setup`, `ci-cd`, `github-actions`
 **Priority**: 🟡 Low
@@ -195,7 +195,7 @@ Configure GitHub Actions pipelines:
 
 ## 🎯 PHASE 1: MVP FEATURES - CORE CALCULATIONS
 
-### Issue 1.1: TypeScript Interfaces for Business Domain
+### Issue 1.1: TypeScript Interfaces for Business Domain (#GH-10)
 **Type**: Feature / Architecture
 **Labels**: `feature`, `architecture`, `types`, `core`
 **Priority**: 🔴 Critical
@@ -220,7 +220,7 @@ Create and document all TypeScript types for the business domain:
 
 ---
 
-### Issue 1.2: Calculate Margins and Totals Logic (TDD)
+### Issue 1.2: Calculate Margins and Totals Logic (TDD) (#GH-11)
 **Type**: Feature
 **Labels**: `feature`, `calculation`, `core`, `logic`, `tdd`
 **Priority**: 🔴 Critical
@@ -261,7 +261,7 @@ Implement business logic for calculations using TDD:
 
 ---
 
-### Issue 1.3: Svelte Store for Active Order (Svelte 5 Runes - TDD)
+### Issue 1.3: Svelte Store for Active Order (Svelte 5 Runes - TDD) (#GH-12)
 **Type**: Feature
 **Labels**: `feature`, `state-management`, `svelte-runes`, `core`, `tdd`
 **Priority**: 🔴 Critical
@@ -306,7 +306,7 @@ Create a Svelte 5 store for the active order using TDD:
 
 ---
 
-### Issue 1.4: Product Form Component
+### Issue 1.4: Product Form Component (#GH-13)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `component`, `form`, `core`
 **Priority**: 🔴 High
@@ -335,7 +335,7 @@ Component for entering product details into an order:
 
 ---
 
-### Issue 1.5: Product Grid Component (POS-style)
+### Issue 1.5: Product Grid Component (POS-style) (#GH-14)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `component`, `ux-core`, `packing`
 **Priority**: 🔴 Critical
@@ -364,7 +364,7 @@ POS-style product selection grid:
 
 ---
 
-### Issue 1.6: Order Items Display Component
+### Issue 1.6: Order Items Display Component (#GH-15)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `component`, `order-display`
 **Priority**: 🔴 High
@@ -392,7 +392,7 @@ Display added items in the order:
 
 ---
 
-### Issue 1.7: Main Home Page / Layout
+### Issue 1.7: Main Home Page / Layout (#GH-16)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `page`, `layout`, `core`
 **Priority**: 🔴 High
@@ -421,7 +421,7 @@ Main application layout:
 
 ## 🏢 PHASE 2: MULTI-CLIENT & PERSISTENCE
 
-### Issue 2.1: Svelte Store for Clients and Orders
+### Issue 2.1: Svelte Store for Clients and Orders (#GH-17)
 **Type**: Feature
 **Labels**: `feature`, `state-management`, `svelte-runes`, `clients`, `tdd`
 **Priority**: 🟡 Critical
@@ -462,7 +462,7 @@ Svelte 5 store for managing clients and their orders using TDD:
 
 ---
 
-### Issue 2.2: PouchDB CRUD for Clients
+### Issue 2.2: PouchDB CRUD for Clients (#GH-18)
 **Type**: Feature
 **Labels**: `feature`, `database`, `pouchdb`, `crud`, `core`, `tdd`
 **Priority**: 🟡 Critical
@@ -503,7 +503,7 @@ CRUD operations for clients in PouchDB using TDD:
 
 ---
 
-### Issue 2.3: PouchDB CRUD for Orders
+### Issue 2.3: PouchDB CRUD for Orders (#GH-19)
 **Type**: Feature
 **Labels**: `feature`, `database`, `pouchdb`, `crud`, `core`, `tdd`
 **Priority**: 🟡 Critical
@@ -539,7 +539,7 @@ CRUD operations for orders in PouchDB using TDD:
 
 ---
 
-### Issue 2.4: Client Form Component
+### Issue 2.4: Client Form Component (#GH-20)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `component`, `form`
 **Priority**: 🟡 Medium
@@ -567,7 +567,7 @@ Form for creating/editing a client:
 
 ---
 
-### Issue 2.5: Client Switcher Component
+### Issue 2.5: Client Switcher Component (#GH-21)
 **Type**: Feature
 **Labels**: `feature`, `ui`, `component`, `navigation`
 **Priority**: 🟡 High
@@ -592,7 +592,7 @@ Component for switching between clients:
 
 ---
 
-### Issue 2.6: Save & Restore Active Order by Client
+### Issue 2.6: Save & Restore Active Order by Client (#GH-22)
 **Type**: Feature
 **Labels**: `feature`, `persistence`, `ux`, `workflow`
 **Priority**: 🟡 Medium
@@ -617,7 +617,7 @@ When changing clients, save/restore the active order:
 
 ## 📊 PHASE 3: HISTORY & STATISTICS
 
-### Issue 3.1: Mark Order as Completed
+### Issue 3.1: Mark Order as Completed (#GH-23)
 **Type**: Feature
 **Labels**: `feature`, `workflow`, `history`, `core`
 **Priority**: 🟡 High
@@ -644,7 +644,7 @@ Add order validation workflow:
 
 ---
 
-### Issue 3.2: Sales History Page by Day
+### Issue 3.2: Sales History Page by Day (#GH-24)
 **Type**: Feature
 **Labels**: `feature`, `history`, `page`, `analytics`
 **Priority**: 🟡 Medium
@@ -670,7 +670,7 @@ Page showing history grouped by day:
 
 ---
 
-### Issue 3.3: Global Statistics by Period
+### Issue 3.3: Global Statistics by Period (#GH-25)
 **Type**: Feature
 **Labels**: `feature`, `statistics`, `analytics`
 **Priority**: 🟢 Low
@@ -693,7 +693,7 @@ Add global stats:
 
 ---
 
-### Issue 3.4: Sales Charts (Chart.js or Recharts)
+### Issue 3.4: Sales Charts (Chart.js or Recharts) (#GH-26)
 **Type**: Feature
 **Labels**: `feature`, `charts`, `analytics`, `future`
 **Priority**: 🟢 Low
@@ -719,7 +719,7 @@ Add visualizations:
 
 ## ⚙️ PHASE 4: CONFIGURATION & SETTINGS
 
-### Issue 4.1: PouchDB CRUD for Products
+### Issue 4.1: PouchDB CRUD for Products (#GH-27)
 **Type**: Feature
 **Labels**: `feature`, `database`, `pouchdb`, `crud`, `tdd`
 **Priority**: 🟡 Medium
@@ -742,7 +742,7 @@ CRUD operations for products in PouchDB using TDD:
 
 ---
 
-### Issue 4.2: Svelte Store for Products
+### Issue 4.2: Svelte Store for Products (#GH-28)
 **Type**: Feature
 **Labels**: `feature`, `state-management`, `svelte-runes`, `products`, `tdd`
 **Priority**: 🟡 Medium
@@ -763,7 +763,7 @@ Store for managing products list using TDD:
 
 ---
 
-### Issue 4.3: Products Management Page
+### Issue 4.3: Products Management Page (#GH-29)
 **Type**: Feature
 **Labels**: `feature`, `settings`, `products`, `ui`
 **Priority**: 🟡 Medium
@@ -788,7 +788,7 @@ UI for managing products:
 
 ---
 
-### Issue 4.4: General Settings Page
+### Issue 4.4: General Settings Page (#GH-30)
 **Type**: Feature
 **Labels**: `feature`, `settings`, `config`
 **Priority**: 🟢 Low
@@ -815,7 +815,7 @@ Settings page:
 
 ## 🔄 PHASE 5: SYNC & OFFLINE
 
-### Issue 5.1: Connectivity Detection
+### Issue 5.1: Connectivity Detection (#GH-31)
 **Type**: Feature
 **Labels**: `feature`, `sync`, `offline`, `ux`, `tdd`
 **Priority**: 🟡 Medium
@@ -836,7 +836,7 @@ Detect and display connectivity status using TDD:
 
 ---
 
-### Issue 5.2: Sync PouchDB to CouchDB (Optional)
+### Issue 5.2: Sync PouchDB to CouchDB (Optional) (#GH-32)
 **Type**: Feature
 **Labels**: `feature`, `sync`, `replication`, `future`, `tdd`
 **Priority**: 🟢 Low
@@ -861,7 +861,7 @@ Sync to CouchDB server using TDD:
 
 ## 🧪 PHASE 6: TESTS & QUALITY
 
-### Issue 6.1: Complete Unit Tests
+### Issue 6.1: Complete Unit Tests (#GH-33)
 **Type**: Test
 **Labels**: `test`, `quality`, `unit-tests`, `tdd`
 **Priority**: 🟡 High
@@ -886,7 +886,7 @@ Complete unit test suite:
 
 ---
 
-### Issue 6.2: Svelte Component Tests
+### Issue 6.2: Svelte Component Tests (#GH-34)
 **Type**: Test
 **Labels**: `test`, `quality`, `component-tests`
 **Priority**: 🟡 Medium
@@ -908,7 +908,7 @@ Tests for main components:
 
 ---
 
-### Issue 6.3: E2E Tests - Business Workflows
+### Issue 6.3: E2E Tests - Business Workflows (#GH-35)
 **Type**: Test
 **Labels**: `test`, `quality`, `e2e-tests`, `tdd`
 **Priority**: 🟡 Medium
@@ -934,7 +934,7 @@ End-to-end tests for business workflows:
 
 ---
 
-### Issue 6.4: Performance & Accessibility Tests
+### Issue 6.4: Performance & Accessibility Tests (#GH-36)
 **Type**: Test
 **Labels**: `test`, `quality`, `a11y`, `performance`
 **Priority**: 🟢 Medium
@@ -960,7 +960,7 @@ Performance and accessibility testing:
 
 ## 📦 PHASE 7: POLISH & DOCUMENTATION
 
-### Issue 7.1: Responsive Design - All Screens
+### Issue 7.1: Responsive Design - All Screens (#GH-37)
 **Type**: Enhancement
 **Labels**: `enhancement`, `ux`, `responsive`
 **Priority**: 🟡 High
@@ -984,7 +984,7 @@ Ensure complete responsive design:
 
 ---
 
-### Issue 7.2: Performance Optimization
+### Issue 7.2: Performance Optimization (#GH-38)
 **Type**: Enhancement
 **Labels**: `enhancement`, `performance`, `optimization`
 **Priority**: 🟡 Medium
@@ -1008,7 +1008,7 @@ Optimize for performance:
 
 ---
 
-### Issue 7.3: UI/UX Polish
+### Issue 7.3: UI/UX Polish (#GH-39)
 **Type**: Enhancement
 **Labels**: `enhancement`, `ux`, `ui`
 **Priority**: 🟡 Medium
@@ -1034,7 +1034,7 @@ Refine the interface:
 
 ---
 
-### Issue 7.4: User Documentation
+### Issue 7.4: User Documentation (#GH-40)
 **Type**: Documentation
 **Labels**: `docs`, `user-guide`
 **Priority**: 🟢 Medium
@@ -1058,7 +1058,7 @@ Documentation for users:
 
 ---
 
-### Issue 7.5: Developer Documentation
+### Issue 7.5: Developer Documentation (#GH-41)
 **Type**: Documentation
 **Labels**: `docs`, `developer-guide`
 **Priority**: 🟢 Low
@@ -1084,7 +1084,7 @@ Documentation for developers:
 
 ## 🚀 PHASE 8: DEPLOYMENT & RELEASE
 
-### Issue 8.1: Cloudflare Deployment
+### Issue 8.1: Cloudflare Deployment (#GH-42)
 **Type**: DevOps
 **Labels**: `devops`, `deployment`, `cloudflare`
 **Priority**: 🟡 High
@@ -1113,7 +1113,7 @@ Finalize and deploy to Cloudflare:
 
 ---
 
-### Issue 8.2: Release v1.0 Preparation
+### Issue 8.2: Release v1.0 Preparation (#GH-43)
 **Type**: Release
 **Labels**: `release`, `version`
 **Priority**: 🟡 Medium
