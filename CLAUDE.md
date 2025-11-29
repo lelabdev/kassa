@@ -110,14 +110,53 @@ git push -u origin feat/11-margin-calculations
 # Then create PR on GitHub with the issue reference
 ```
 
-### Important Git Rules
+### Important Git Rules - ⚠️ CRITICAL & ENFORCED
 
-- ✅ **Never commit to main** - Always use feature branches
-- ✅ **Always reference issue number** in commit messages (`Closes #11`)
-- ✅ **One issue per branch** - Keep work focused
-- ✅ **Tests must pass** - Run `pnpm test` before committing
-- ✅ **Code must be formatted** - Run `pnpm format` before committing
-- ✅ **TypeScript must check** - Run `pnpm check` before committing
+**🔒 `main` BRANCH IS PROTECTED ON GITHUB - YOU CANNOT WRITE TO IT DIRECTLY**
+
+**ANY ATTEMPT TO COMMIT TO `main` WILL BE REJECTED AND FAIL.** This is not a suggestion—it's enforced by GitHub branch protection rules.
+
+#### ✋ MANDATORY RULE: ALWAYS CREATE FEATURE BRANCH FIRST
+
+**Before you modify ANY file, verify you are NOT on `main`:**
+```bash
+git status  # If you see "On branch main" → STOP and create branch immediately
+```
+
+**If you see "On branch main", create feature branch NOW:**
+```bash
+git checkout -b <type>/<issue-number>-<slug>
+# Examples: test/14-product-grid, feat/11-margin, docs/5-setup
+```
+
+**IF YOU ARE UNSURE about the issue number or branch name, ASK BEFORE MAKING CHANGES.**
+
+#### Correct Workflow (Non-negotiable)
+
+1. **FIRST**: Check branch → `git status` (must NOT say "On branch main")
+2. **SECOND**: If on main, create feature branch → `git checkout -b test/14-product-grid`
+3. **THEN**: Make changes on feature branch only
+4. **COMMIT**: Always include issue reference → `Closes #14`
+5. **PUSH**: Push feature branch → `git push -u origin test/14-product-grid`
+6. **MERGE**: Create PR on GitHub → Review → Merge
+
+#### Branch Naming Format (mandatory)
+- `test/<issue-number>-<slug>` for tests
+- `feat/<issue-number>-<slug>` for features
+- `docs/<issue-number>-<slug>` for documentation
+- `fix/<issue-number>-<slug>` for bug fixes
+- `refactor/<issue-number>-<slug>` for refactoring
+
+**DO NOT deviate from this format.**
+
+#### Commit Requirements
+- ✅ Always reference issue number: `Closes #14`
+- ✅ Tests must pass: `pnpm test`
+- ✅ Code formatted: `pnpm format`
+- ✅ TypeScript checks: `pnpm check`
+- ✅ One feature per branch (not multiple issues)
+
+**ENFORCEMENT:** GitHub will reject any direct push to `main`. All work MUST go through feature branches → PR → merge workflow.
 
 ## Development Roadmap
 
