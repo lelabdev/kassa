@@ -119,6 +119,52 @@ git push -u origin feat/issue-11-margin-calculations
 - ✅ **Code must be formatted** - Run `pnpm format` before committing
 - ✅ **TypeScript must check** - Run `pnpm check` before committing
 
+## Development Roadmap
+
+### Overview
+
+The project is organized in 8 phases (Phase 0-8) to build Kassa incrementally with clear dependencies. **See `docs/ROADMAP.md`** for the complete checklist.
+
+### How to Work from the Roadmap
+
+1. **Check the roadmap** - `docs/ROADMAP.md` lists all issues in planned order
+2. **Pick next unchecked item** - Start with Phase 0 critical tasks
+3. **Go to GitHub** - All issue details are on GitHub (open the issue link)
+4. **Create a feature branch** - Use format: `<type>/<issue-number>-<slug>`
+   - Example: `feat/11-margin-calculations`
+5. **Work TDD** - Write tests first, then code (marked issues have explicit TDD guidance)
+6. **Commit with reference** - Always include `Closes #<issue-number>` in commit message
+7. **Push & Create PR** - Link PR to the issue, get review, merge
+8. **Check off in roadmap** - When PR is merged to main, update `docs/ROADMAP.md` to mark the item as complete: `- [x]` (in the same PR or immediately after)
+
+### Phase Guidelines
+
+- **Phase 0**: Setup & configuration (critical before Phase 1)
+- **Phase 1**: Core business logic & UI components
+- **Phase 2**: Client & order persistence with PouchDB
+- **Phase 3**: Sales history & analytics
+- **Phase 4**: Product management & settings
+- **Phase 5**: Offline sync & connectivity
+- **Phase 6**: Complete test coverage (parallel with Phases 1-3)
+- **Phase 7**: Polish, optimization, documentation
+- **Phase 8**: Deployment preparation
+
+### Critical Path (If Unsure Where to Start)
+
+1. Phase 0: Setup (0.1-0.6)
+2. Phase 1.1-1.2: TypeScript interfaces & calculations (TDD)
+3. Phase 1.3-1.6: Store & UI components
+4. Phase 1.7: Main layout
+5. Phase 2: Clients & order persistence
+6. Continue sequentially through phases
+
+### Key Points
+
+- **All issue details are on GitHub** - No separate design docs, refer to the GitHub issue directly
+- **TDD-marked issues** - Have explicit test requirements in the issue description
+- **Dependencies matter** - Don't skip phases or issues out of order (e.g., Phase 4 depends on Phase 2)
+- **Offline-first mindset** - All features must work without network access
+
 ---
 
 ## Quick Commands
