@@ -1,0 +1,40 @@
+{
+	"name": "Kassa",
+	"short_name": "Kassa",
+	"description": "Mobile-first POS app for small fruit and vegetable vendors - simplifies sales calculations and margin management for small fruit and vegetable vendors (families, couples, small shops)",
+	"theme_color": "#000000",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		},
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "maskable"
+		}
+	],
+	"categories": ["productivity", "business"],
+	"shortcuts": [
+		{
+			"name": "New Order",
+			"short_name": "Order",
+			"description": "Create a new sales order",
+			"url": "/",
+			"icons": [
+				{
+					"src": "/favicon.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	]
+}
