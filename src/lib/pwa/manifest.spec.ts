@@ -12,7 +12,16 @@ describe('PWA Manifest', () => {
 	});
 
 	it('should have required manifest fields', () => {
-		const requiredFields = ['name', 'short_name', 'description', 'start_url', 'display', 'theme_color', 'background_color', 'scope'];
+		const requiredFields = [
+			'name',
+			'short_name',
+			'description',
+			'start_url',
+			'display',
+			'theme_color',
+			'background_color',
+			'scope'
+		];
 		requiredFields.forEach((field) => {
 			expect(manifest).toHaveProperty(field);
 			expect(manifest[field]).toBeTruthy();

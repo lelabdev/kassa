@@ -14,15 +14,15 @@ A mobile-first PWA (Progressive Web App) designed to simplify sales calculations
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|-----------|
-| **Framework** | [SvelteKit 2](https://kit.svelte.dev) + [Svelte 5](https://svelte.dev) |
-| **Styling** | [Tailwind CSS 4](https://tailwindcss.com) + [Skeleton Labs](https://www.skeleton.dev) |
-| **Database** | [PouchDB](https://pouchdb.com) (IndexedDB-based, offline-sync ready) |
-| **Testing** | [Vitest](https://vitest.dev) + [Playwright](https://playwright.dev) |
-| **Deployment** | [Cloudflare Workers](https://workers.cloudflare.com) |
-| **Language** | [TypeScript](https://www.typescriptlang.org) 5 (strict mode) |
-| **Code Quality** | ESLint + Prettier |
+| Category         | Technology                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| **Framework**    | [SvelteKit 2](https://kit.svelte.dev) + [Svelte 5](https://svelte.dev)                |
+| **Styling**      | [Tailwind CSS 4](https://tailwindcss.com) + [Skeleton Labs](https://www.skeleton.dev) |
+| **Database**     | [PouchDB](https://pouchdb.com) (IndexedDB-based, offline-sync ready)                  |
+| **Testing**      | [Vitest](https://vitest.dev) + [Playwright](https://playwright.dev)                   |
+| **Deployment**   | [Cloudflare Workers](https://workers.cloudflare.com)                                  |
+| **Language**     | [TypeScript](https://www.typescriptlang.org) 5 (strict mode)                          |
+| **Code Quality** | ESLint + Prettier                                                                     |
 
 ## Getting Started
 
@@ -49,6 +49,7 @@ The app will be available at `http://localhost:5173`
 ## Development Commands
 
 ### Running the App
+
 ```bash
 pnpm dev              # Start dev server with hot reload
 pnpm build            # Build for production (Cloudflare)
@@ -56,6 +57,7 @@ pnpm preview          # Preview production build (port 4173)
 ```
 
 ### Testing
+
 ```bash
 pnpm test:unit        # Run unit tests (browser + server)
 pnpm test:e2e         # Run end-to-end tests with Playwright
@@ -63,6 +65,7 @@ pnpm test             # Run all tests
 ```
 
 ### Code Quality
+
 ```bash
 pnpm lint             # Check ESLint and Prettier
 pnpm format           # Auto-format code
@@ -105,22 +108,22 @@ export const db = new PouchDB('kassa-local');
 
 // For data structure
 export interface Product {
-  _id?: string;
-  _rev?: string;
-  type: 'product';
-  name: string;
-  price_per_unit: number; // purchase price
-  unit: string; // kg, piece, etc.
+	_id?: string;
+	_rev?: string;
+	type: 'product';
+	name: string;
+	price_per_unit: number; // purchase price
+	unit: string; // kg, piece, etc.
 }
 
 export interface Order {
-  _id?: string;
-  _rev?: string;
-  type: 'order';
-  client_name: string;
-  items: OrderItem[];
-  total_amount: number;
-  created_at: Date;
+	_id?: string;
+	_rev?: string;
+	type: 'order';
+	client_name: string;
+	items: OrderItem[];
+	total_amount: number;
+	created_at: Date;
 }
 ```
 
@@ -129,13 +132,13 @@ export interface Order {
 ```typescript
 // Get all documents of a type
 const products = await db.allDocs({
-  include_docs: true,
-  key: 'product'
+	include_docs: true,
+	key: 'product'
 });
 
 // Query with Mango (if using pouchdb-find)
 const orders = await db.find({
-  selector: { type: 'order', created_at: { $gte: startDate } }
+	selector: { type: 'order', created_at: { $gte: startDate } }
 });
 ```
 
@@ -144,8 +147,8 @@ const orders = await db.find({
 ```typescript
 // Sync with CouchDB server
 db.sync('https://your-couchdb-server/kassa', {
-  live: true,
-  retry: true
+	live: true,
+	retry: true
 });
 ```
 
@@ -209,6 +212,7 @@ Requires IndexedDB support for PouchDB offline storage.
 ## Contributing
 
 When contributing:
+
 1. Run `pnpm lint` to check code quality
 2. Run `pnpm test` to ensure tests pass
 3. Use `pnpm format` for consistent formatting

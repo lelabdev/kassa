@@ -13,6 +13,7 @@ Reusable Svelte components for the Kassa application.
 ## Structure
 
 Components are organized by feature:
+
 - Form components (ProductForm, ClientForm, etc.)
 - Display components (OrderItems, ProductGrid, etc.)
 - Layout components (Header, Footer, etc.)

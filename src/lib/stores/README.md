@@ -20,18 +20,26 @@ import { $state, $derived } from 'svelte';
 import type { Order } from '$lib';
 
 export function createOrderStore() {
-  let order = $state<Order | null>(null);
-  let items = $state<OrderItem[]>([]);
+	let order = $state<Order | null>(null);
+	let items = $state<OrderItem[]>([]);
 
-  const totals = $derived.by(() => calculateOrderTotals(items));
+	const totals = $derived.by(() => calculateOrderTotals(items));
 
-  return {
-    get order() { return order; },
-    set order(value) { order = value; },
-    get items() { return items; },
-    addItem: (item: OrderItem) => { items.push(item); },
-    getTotals: () => totals,
-  };
+	return {
+		get order() {
+			return order;
+		},
+		set order(value) {
+			order = value;
+		},
+		get items() {
+			return items;
+		},
+		addItem: (item: OrderItem) => {
+			items.push(item);
+		},
+		getTotals: () => totals
+	};
 }
 ```
 

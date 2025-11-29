@@ -20,6 +20,7 @@ Static assets for the Kassa application.
 ## PWA Icons
 
 For progressive web app installation, include:
+
 - `favicon.ico` (16x16, 32x32)
 - `icon-192.png` (192x192, PNG)
 - `icon-512.png` (512x512, PNG)
