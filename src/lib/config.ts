@@ -110,19 +110,16 @@ function buildConfig(): Config {
 		'development' as Environment
 	);
 
-	const debug = parseBoolean(import.meta.env.PUBLIC_DEBUG as string | undefined, env === 'development');
-
-	const apiTimeout = parseNumber(
-		import.meta.env.PUBLIC_API_TIMEOUT as string | undefined,
-		30000
+	const debug = parseBoolean(
+		import.meta.env.PUBLIC_DEBUG as string | undefined,
+		env === 'development'
 	);
+
+	const apiTimeout = parseNumber(import.meta.env.PUBLIC_API_TIMEOUT as string | undefined, 30000);
 
 	const dbName = (import.meta.env.PUBLIC_DB_NAME as string | undefined) || 'kassa';
 
-	const pwsEnabled = parseBoolean(
-		import.meta.env.PUBLIC_ENABLE_PWA as string | undefined,
-		true
-	);
+	const pwsEnabled = parseBoolean(import.meta.env.PUBLIC_ENABLE_PWA as string | undefined, true);
 
 	const offlineEnabled = parseBoolean(
 		import.meta.env.PUBLIC_ENABLE_OFFLINE as string | undefined,
@@ -156,10 +153,7 @@ function buildConfig(): Config {
 		db: {
 			name: dbName,
 			remoteUrl: (import.meta.env.PUBLIC_REMOTE_DB_URL as string | undefined) || undefined,
-			debug: parseBoolean(
-				import.meta.env.PUBLIC_DB_DEBUG as string | undefined,
-				false
-			)
+			debug: parseBoolean(import.meta.env.PUBLIC_DB_DEBUG as string | undefined, false)
 		},
 		pwa: {
 			enabled: pwsEnabled,
