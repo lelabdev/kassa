@@ -115,3 +115,20 @@ export interface Client {
 	/** ISO date string of the client's last order (null if no orders) */
 	lastOrderAt: string | null;
 }
+
+/**
+ * Represents aggregated financial totals for an entire order
+ */
+export interface OrderTotals {
+	/** Sum of all item costs */
+	totalCost: number;
+
+	/** Sum of all item revenues */
+	totalRevenue: number;
+
+	/** Sum of all item margins (totalRevenue - totalCost) */
+	totalMargin: number;
+
+	/** Total profit percentage ((totalMargin / totalRevenue) × 100) */
+	totalMarginPercent: number;
+}
