@@ -1,7 +1,9 @@
 # 📋 Kassa Development Roadmap
 
-Quick checklist of all issues in planned order.  
-See detailed specs in `docs/tmp/github-issues-draft-en.md`
+Quick checklist of all issues in planned order.
+
+> 💡 **All issue details are on GitHub.** Click the issue link (e.g., `#4`) to see full requirements, acceptance criteria, and TDD specifications.
+> **⚠️ ALL WORK MUST USE TDD** - Tests first, then implementation.
 
 ---
 
@@ -78,11 +80,12 @@ See detailed specs in `docs/tmp/github-issues-draft-en.md`
 ## 📝 How to Use This
 
 1. Pick next unchecked item
-2. Open the GitHub issue (#GH-XX)
-3. Create branch: `<type>/<GH-number>-<slug>`
-4. Work on it
-5. Create PR
-6. ✅ Check the item when merged
+2. Open the GitHub issue (#XX) for full details
+3. Create branch: `<type>/<issue-number>-<slug>` (e.g., `feat/4-pouchdb-setup`)
+4. **Work TDD**: Write tests first (failures), then code (pass tests), then refactor
+5. Create PR and link to the issue
+6. Get review and merge to main
+7. ✅ Check the item in roadmap when merged (update this file with `- [x]`)
 
 ---
 
