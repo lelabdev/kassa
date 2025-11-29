@@ -34,21 +34,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Branch Naming Convention
 
-Create branches using this format: `<type>/<issue-#>-<slug>`
+Create branches using this format: `<type>/<#>-<slug>`
 
 **Types (must match GitHub labels):**
 - `feat/` - New features
 - `test/` - Tests and test-related
 - `docs/` - Documentation
-- `bug/` - Bug fixes
+- `fix/` - Bug fixes
 - `refactor/` - Code refactoring
 
 **Examples:**
 ```bash
-git checkout -b feat/issue-11-margin-calculations
-git checkout -b test/issue-33-unit-tests
-git checkout -b docs/issue-40-user-guide
-git checkout -b bug/issue-123-fix-decimal-rounding
+git checkout -b feat/11-margin-calculations
+git checkout -b test/33-unit-tests
+git checkout -b docs/40-user-guide
+git checkout -b fix/123-fix-decimal-rounding
 ```
 
 ### Commit Message Convention
@@ -88,7 +88,7 @@ Only 5 labels per issue:
 
 ```bash
 # 1. Create branch from issue
-git checkout -b feat/issue-11-margin-calculations
+git checkout -b feat/11-margin-calculations
 
 # 2. Work on the issue (TDD: tests first!)
 # - Red: Write tests that fail
@@ -106,7 +106,7 @@ git commit -m "feat: implement margin and total calculations with tests
 Closes #11"
 
 # 4. Push and create PR
-git push -u origin feat/issue-11-margin-calculations
+git push -u origin feat/11-margin-calculations
 # Then create PR on GitHub with the issue reference
 ```
 
